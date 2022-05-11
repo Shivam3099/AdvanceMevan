@@ -134,7 +134,7 @@ public class UserModel {
 			bean1.setName(rs.getString(2));
 			bean1.setRollNo(rs.getInt(3));
 			bean1.setPhy(rs.getInt(4));
-			bean1.setChem(rs.getInt(5));
+			bean1.setChem(rs.getInt(5));  
 			bean1.setMaths(rs.getInt(6));
 			list.add(bean1);
 

@@ -6,15 +6,21 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body bgcolor="pink">
 
 	<form action="login" method="post">
 
 		<%@include file="Header.jsp"%>
 		<div align="center">
 			<br> <br> <br> <br> <br> <br> <br>
-			<br> <br>
 
+           <%
+				String message = (String) request.getAttribute("message");
+				if (message != null) {
+			%><font color="red"><%=message%></font>
+			<%
+				}
+			%>
 			<%
 				String err = (String) request.getAttribute("err");
 				if (err != null) {
@@ -55,7 +61,9 @@
 					<td></td>
 					<td><a href="ForgetPasswordView.jsp">Forget Password...??</a></td>
 				</tr>
+
 				<tr>
+
 					<td></td>
 					<td><a href="RegistrationForm.jsp">Create Account...??</a></td>
 
